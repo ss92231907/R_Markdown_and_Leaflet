@@ -1,0 +1,21 @@
+---
+title: "R_Markdown_and_Leaflet"
+output: html_document
+date: "2025-01-29"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Interactive Map
+
+```{r}
+library(leaflet)
+
+# Create a simple Leaflet map
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng = -93.65, lat = 42.0285, popup = "This is Iowa!")
+
+```
